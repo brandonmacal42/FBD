@@ -12,7 +12,7 @@ public class Main {
         List<Hotel> hoteles = new ArrayList<>();
 
         // Cargar datos desde CSV (ejemplo)
-        CsvFileManager.loadHoteles(hoteles);
+        // CsvFileManager.loadHoteles(hoteles);
         // CsvFileManager.loadHuespedes(huespedes);
         // CsvFileManager.loadCuartos(cuartos);
 
