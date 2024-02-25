@@ -1,61 +1,28 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        // Lógica principal del programa
+        // Ejemplo de uso
+        List<Hotel> hoteles = new ArrayList<>();
+
+        // Cargar datos desde CSV (ejemplo)
+        CsvFileManager.loadHoteles(hoteles);
+        // CsvFileManager.loadHuespedes(huespedes);
+        // CsvFileManager.loadCuartos(cuartos);
+
+        // Realizar operaciones (ejemplo)
+        Hotel nuevoHotel = new Hotel(0, 0, 0, 0, 0, 0, null, null, null, null/* Datos del nuevo hotel */);
+        hoteles.add(nuevoHotel);
+
+        // Guardar datos en CSV
+        // CsvFileManager.saveHoteles(hoteles);
+        // CsvFileManager.saveHuespedes(huespedes);
+        // CsvFileManager.saveCuartos(cuartos);
     }
-}
-
-class Hotel {
-    private int id;
-    private String nombre;
-    // Otros atributos necesarios
-
-    public Hotel(int id, String nombre) {
-        this.id = id;
-        this.nombre = nombre;
-        // Inicializar otros atributos
-    }
-
-    // Métodos getters y setters para los atributos
-    
-    // Métodos para agregar, consultar, editar y eliminar información
-}
-
-class Huesped {
-    private int id;
-    private String nombre;
-    // Otros atributos necesarios
-
-    public Huesped(int id, String nombre) {
-        this.id = id;
-        this.nombre = nombre;
-        // Inicializar otros atributos
-    }
-
-    // Métodos getters y setters para los atributos
-    
-    // Métodos para agregar, consultar, editar y eliminar información
-}
-
-class Cuarto {
-    private int id;
-    private int numero;
-    // Otros atributos necesarios
-
-    public Cuarto(int id, int numero) {
-        this.id = id;
-        this.numero = numero;
-        // Inicializar otros atributos
-    }
-
-    // Métodos getters y setters para los atributos
-    
-    // Métodos para agregar, consultar, editar y eliminar información
-}
-
-class CsvManager {
-    private static final String FILENAME_HOTELES = "hoteles.csv";
-    private static final String FILENAME_HUESPEDES = "huespedes.csv";
-    private static final String FILENAME_CUARTOS = "cuartos.csv";
-
-    // Métodos para escribir y leer archivos CSV
 }
